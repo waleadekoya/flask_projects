@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container" style="padding-top: 15px">
+        <h5> Hello {{ email }} </h5>
+        {% if email %}
+            <button>
+                <a href="{{ url_for('home.list_blogs') }}"> View Your Blogs</a>
+            </button>
+        {% endif %}
+    </div>
+{% endblock %}

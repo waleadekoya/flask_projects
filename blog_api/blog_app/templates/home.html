@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Blog</title>
+</head>
+{% block content %}
+<p>
+    <strong> There's nothing here yet! Use the /login or /register endpoints. </strong>
+</p>
+
+<button>
+    <a href="{{ url_for('home.login_template') }}"> Log in</a>
+</button>
+<button>
+    <a href="{{ url_for('home.register_template') }}"> Register</a>
+</button>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% block content %}
+    <div class='container'>
+        <h2>{{ email }}'s blogs</h2>
+        {% for blog in blogs %}
+            <h3> <a href="/posts/{{ blog._id }}">{{ blog.title }}</a> </h3>
+            <p> {{ blog.description}} </p>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

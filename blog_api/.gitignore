@@ -1,0 +1,8 @@
+setup_instructions.txt
+*.jpg
+*.jpeg
+*.png
+__pycache__
+*.pyc
+*.pdf
+blog_api/CREDENTIALS.py
